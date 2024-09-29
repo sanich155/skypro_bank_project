@@ -26,13 +26,6 @@ warn_return_any = true
 
 [tool.black]
 line-length = 119
-exclude = """
-(
- /(
-   | .git
-  )/
-)
-"""
 
 [tool.isort]
 line_length = 119
