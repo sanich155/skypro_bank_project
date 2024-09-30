@@ -1,4 +1,4 @@
-def filter_by_state(transactions: list, state: str="EXECUTED") -> list:
+def filter_by_state(transactions: list, state: str = "EXECUTED") -> list:
     """Оставляет транзакции с указанным статусом выполнения.
     По умолчанию - выполненные"""
 
@@ -9,7 +9,7 @@ def filter_by_state(transactions: list, state: str="EXECUTED") -> list:
     return result_transactions
 
 
-def sort_by_date(transactions: list, sort_direction: bool=True) -> list:
+def sort_by_date(transactions: list, sort_direction: bool = True) -> list:
     """Сортирует транзакции по дате выполнения"""
 
     transactions.sort(key=lambda transaction: transaction["date"], reverse=sort_direction)

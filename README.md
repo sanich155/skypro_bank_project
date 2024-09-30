@@ -2,5 +2,5 @@
 
 ## Не стоит его устанавливать, но если всё же, то
 1. Клонируйте репозиторий:
-(https://github.com/sanich155/skypro_bank_project.git)
+ https://github.com/sanich155/skypro_bank_project.git
 2. Зависимостей тут пока нет)
