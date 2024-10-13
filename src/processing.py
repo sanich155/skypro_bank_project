@@ -4,7 +4,7 @@ def filter_by_state(transactions: list, state: str = "EXECUTED") -> list:
 
     result_transactions = []
     for transaction in transactions:
-        if 'state' not in transaction.keys():
+        if "state" not in transaction.keys():
             continue
         if transaction["state"] == state:
             result_transactions.append(transaction)
@@ -18,4 +18,14 @@ def sort_by_date(transactions: list, sort_direction: bool = True) -> list:
     return transactions
 
 
-print(sort_by_date([{"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"}, {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},{"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"}, {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},], sort_direction=False))
+print(
+    sort_by_date(
+        [
+            {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+            {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+            {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+            {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+        ],
+        sort_direction=False,
+    )
+)

@@ -20,4 +20,4 @@ def get_date(format_time: str) -> str:
         return datetime.fromisoformat(format_time).strftime("%d.%m.%Y")
     except ValueError as e:
         print(e)
-        return None
+        return ""
