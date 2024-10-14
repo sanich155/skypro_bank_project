@@ -5,6 +5,6 @@
  https://github.com/sanich155/skypro_bank_project.git
 2. Зависимостей тут пока нет))
 
-## Информация о тестировании
+## Тестирование
  Всё находится в /htmlcov/index.html
  
