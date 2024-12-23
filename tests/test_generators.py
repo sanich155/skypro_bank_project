@@ -1,6 +1,4 @@
-from src.generators import filter_by_currency
-from src.generators import card_number_generator
-from src.generators import transaction_descriptions
+from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
 
 def test_filter_by_currency(transactions):
@@ -46,7 +44,6 @@ def test_filter_by_currency(transactions):
     }
 
 
-
 def test_card_number_generator():
     """Проверяет функцию-генератор номеров карт"""
     generator = card_number_generator(1234567890111213, 1234567890111215)
@@ -54,7 +51,9 @@ def test_card_number_generator():
     assert next(generator) == 1234567890111214
     assert next(generator) == 1234567890111215
 
+
 def tests_transaction_descriptions(transactions):
+    """Проверяет генератор описаний транзакций"""
     generator = transaction_descriptions(transactions)
     assert next(generator) == "Перевод организации"
     assert next(generator) == "Перевод со счета на счет"

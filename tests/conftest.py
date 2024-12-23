@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.fixture
 def transactions() -> list:
     """Создает список транзакций для домашки 11.1"""
