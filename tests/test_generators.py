@@ -1,3 +1,5 @@
+import pytest
+
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
 
@@ -44,12 +46,15 @@ def test_filter_by_currency(transactions):
     }
 
 
-def test_card_number_generator():
+@pytest.mark.parametrize(
+    "x, y, expected", [(1234567890111213, 1234567890111215, [1234567890111213, 1234567890111214, 1234567890111215])]
+)
+def test_card_number_generator(x, y, expected):
     """Проверяет функцию-генератор номеров карт"""
-    generator = card_number_generator(1234567890111213, 1234567890111215)
-    assert next(generator) == 1234567890111213
-    assert next(generator) == 1234567890111214
-    assert next(generator) == 1234567890111215
+    generator = card_number_generator(x, y)
+    assert next(generator) == expected[0]
+    assert next(generator) == expected[1]
+    assert next(generator) == expected[2]
 
 
 def tests_transaction_descriptions(transactions):

@@ -52,6 +52,7 @@ def transactions() -> list:
         },
     ]
 
+
 @pytest.fixture
 def transactions_list() -> list:
     """Создает список транзакций для домашки 10.2"""
