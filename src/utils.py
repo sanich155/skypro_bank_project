@@ -1,5 +1,5 @@
 import json
-import os
+from src.external_api import convert
 def get_trans_list(filename: str) -> list:
     """Получает путь до JSON-файла и возвращает список словарей с транзакциями"""
 
@@ -13,12 +13,15 @@ def get_trans_list(filename: str) -> list:
         return list()
 
 
-print(get_trans_list(os.path.abspath("../data/operations.json")))
-print(type(get_trans_list(os.path.abspath("../data/operations.json"))))
-
 def count_trans_sum(transaction: dict):
     """Получает на вход транзакцию и выводит её сумму в рублях"""
 
-    pass
+    if transaction['operationAmount']['currency']['code'] == 'RUB':
+        return transaction['operationAmount']['amount']
+    else:
+        currency = transaction['operationAmount']['currency']['code']
+        amount = transaction['operationAmount']['amount']
+        result = convert(amount, currency)
+        return result
 
-#print(os.path.abspath("../data/operations.json"))
+
