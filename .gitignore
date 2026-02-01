@@ -1,3 +1,6 @@
 .idea/
 __pycache__/
 venv/
+add.txt
+divid.txt
+.env
