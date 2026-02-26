@@ -4,3 +4,4 @@ venv/
 add.txt
 divid.txt
 .env
+logs.log
