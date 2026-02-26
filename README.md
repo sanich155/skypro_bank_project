@@ -11,3 +11,5 @@
 ## Выполненные задания
 Домашка 11.1 - генераторы в /src/generators.py
 Домашка 11.2 - декораторы в /src/decorators.py
+Домашка 12.1
+Домашка 12.2 - логирование /src/utils.py, masks.py, logs.py, logs.log
